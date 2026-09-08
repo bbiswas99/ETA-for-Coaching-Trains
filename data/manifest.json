@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-09-06T00:13:55.402Z",
+  "source": "datameet/railways open data (station master, train master, stop-level timetable)",
+  "note": "Timetables are real published schedules. Running positions, delays and forecasts are simulated by this project — no live railway feed is involved.",
+  "datasets": [
+    {
+      "id": "demo-network",
+      "label": "Demo network",
+      "description": "231 trains with full stop-level timetables and 5,104 stations. Running state is derived for the current clock.",
+      "kind": "schedule",
+      "files": [
+        "/data/stations.csv",
+        "/data/demo-schedule.csv"
+      ],
+      "trains": 231,
+      "stops": 31628,
+      "stations": 8975
+    },
+    {
+      "id": "sample-snapshot",
+      "label": "Sample snapshot",
+      "description": "127 trains as a flat one-row-per-train file, captured at 2026-09-06T17:45:00+05:30. Example of the format a live feed export would take.",
+      "kind": "snapshot",
+      "files": [
+        "/sample-trains.csv"
+      ],
+      "trains": 127,
+      "capturedAt": "2026-09-06T17:45:00+05:30"
+    },
+    {
+      "id": "sample-model-eta",
+      "label": "Snapshot with supplied forecast",
+      "description": "24 trains carrying predicted_arrival and eta_confidence columns, to show the app deferring to an upstream model instead of its own baseline.",
+      "kind": "snapshot",
+      "files": [
+        "/data/sample-trains-with-model-eta.csv"
+      ],
+      "trains": 24,
+      "capturedAt": "2026-09-06T17:45:00+05:30"
+    }
+  ]
+}
